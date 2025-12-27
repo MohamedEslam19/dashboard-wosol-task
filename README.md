@@ -1,35 +1,32 @@
-# Nuxt Starter Template
+# Dashboard Wosol Task
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+A modern dashboard application built with Nuxt 4 and Nuxt UI, featuring data visualization with Unovis.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+## Features
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+- **Nuxt 3**: A powerful framework for Vue.js developers.
+- **Nuxt UI**: A UI library for building beautiful and accessible web applications.
+- **Unovis**: High-performance data visualization for the web.
+- **VueUse**: A collection of essential Vue Composition Utilities.
+- **ESLint & Prettier**: Configured for consistent code style and quality.
+- **Lucide & Heroicons**: Rich icon sets for a modern look.
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-  </picture>
-</a>
+## Tech Stack
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+- **Framework**: [Nuxt 3](https://nuxt.com)
+- **UI Library**: [Nuxt UI](https://ui.nuxt.com)
+- **Utilities**: [VueUse](https://vueuse.org)
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org)
+- **Linting**: [ESLint](https://eslint.org)
 
-## Quick Start
+## Prerequisites
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/starter
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
+- [Node.js](https://nodejs.org) (v20.x or later)
+- [pnpm](https://pnpm.io) (v10.x or later)
 
 ## Setup
 
-Make sure to install the dependencies:
+Install the dependencies:
 
 ```bash
 pnpm install
@@ -51,10 +48,23 @@ Build the application for production:
 pnpm build
 ```
 
-Locally preview production build:
+Locally preview the production build:
 
 ```bash
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Linting
+
+Check and fix code style:
+
+```bash
+# Lint code
+pnpm lint
+
+# Fix linting issues
+pnpm lint:fix
+
+# Run type checking
+pnpm typecheck
+```
