@@ -6,35 +6,44 @@ const toast = useToast()
 
 const open = ref(false)
 
-const links = [[{
-  label: 'Home',
-  icon: 'i-lucide-house',
-  to: '/',
-  onSelect: () => {
+const links = computed(() => {
+  const onSelect = () => {
     open.value = false
   }
-}, {
-  label: 'Customers',
-  icon: 'i-lucide-users',
-  to: '#customers',
-  onSelect: () => {
-    open.value = false
-  }
-}], [
-  {
+
+  return [[{
+    label: 'Dashboard',
+    icon: 'i-lucide-house',
+    to: '#dashboard'
+  }, {
+    label: 'Chat',
+    icon: 'i-lucide-message-circle',
+    to: '#chat'
+  }, {
+    label: 'Quotations',
+    icon: 'i-lucide-file-text',
+    to: '#quotations'
+  }, {
+    label: 'Clients',
+    icon: 'i-lucide-users',
+    to: '/'
+  }, {
+    label: 'Settings',
+    icon: 'i-lucide-settings',
+    to: '#settings'
+  }].map(item => ({ ...item, onSelect })), [{
     label: 'Logout',
     icon: 'i-lucide-log-out',
+    to: '#logout',
     class: 'bg-red-100 text-red-500 rounded-lg',
-    onSelect: () => {
-      open.value = false
-    }
-  }
-]] satisfies NavigationMenuItem[][]
+    onSelect
+  }]] satisfies NavigationMenuItem[][]
+})
 
 const groups = computed(() => [{
   id: 'links',
   label: 'Go to',
-  items: links.flat()
+  items: links.value.flat()
 }, {
   id: 'code',
   label: 'Code',
@@ -94,6 +103,7 @@ onMounted(async () => {
           orientation="vertical"
           tooltip
           popover
+          :ui="{ item: 'py-2 my-2',linkLabel:'py-2' }"
         />
 
         <UNavigationMenu
@@ -105,14 +115,11 @@ onMounted(async () => {
         />
       </template>
 
-      <!-- <template #footer="{ collapsed }">
-
-      </template> -->
     </UDashboardSidebar>
 
     <div class="w-full flex flex-col overflow-auto">
 
-      <UHeader class="py-4">
+      <UHeader :ui="{container: 'max-w-full'}" class="py-4">
         <template #left>
           <UDashboardSearchButton class="bg-transparent ring-default h-10 w-full" />
         </template>
