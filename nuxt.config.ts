@@ -8,6 +8,17 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  ssr: false,
+
+  nitro: {
+    preset: 'github-pages'
+  },
+
+  app: {
+    baseURL: '/dashboard-wosol-task/',
+    buildAssetsDir: 'assets'
+  },
+
   routeRules: {
     '/': { prerender: true },
     '/api/**': {
