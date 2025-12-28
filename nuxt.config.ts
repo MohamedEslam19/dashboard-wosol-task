@@ -10,14 +10,14 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  nitro: {
-    preset: 'github-pages'
-  },
+  // nitro: {
+  //   preset: 'github-pages'
+  // },
 
-  app: {
-    baseURL: '/dashboard-wosol-task/',
-    buildAssetsDir: 'assets'
-  },
+  // app: {
+  //   baseURL: '/dashboard-wosol-task/',
+  //   buildAssetsDir: 'assets'
+  // },
 
   routeRules: {
     '/': { prerender: true },
